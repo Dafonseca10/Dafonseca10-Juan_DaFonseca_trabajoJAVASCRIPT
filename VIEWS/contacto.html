@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contacto — Ultimate Kits</title>
+  <link rel="icon" type="image/png" href="../IMAGES/logo-ultimate-kits.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <div class="brand">
+      <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+      <span>Ultimate Kits</span>
+    </div>
+    <nav class="menu">
+      <a href="../index.html">Inicio</a>
+      <a href="./galeria.html">Productos</a>
+      <a href="./presupuesto.html">Presupuesto</a>
+      <a href="./contacto.html" class="active">Contacto</a>
+    </nav>
+    <div class="actions">
+      <a href="./presupuesto.html" class="btn">Pedir Presupuesto</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="cats">
+    <h2>Contacto y ubicación</h2>
+    <p class="lead">Mapa dinámico con ruta desde tu ubicación hasta nuestra tienda (Madrid).</p>
+      <!-- Contenedor del mapa -->
+    <div id="map" style="height:460px;border-radius:12px;border:1px solid var(--border)"></div>
+    <p id="routeStatus" class="small">Obteniendo tu ubicación...</p>
+
+        <!-- Información de contacto en tarjetas -->
+
+    <div class="grid4" style="margin-top:18px">
+      <div class="card"><div class="pad"><strong>Dirección</strong><p class="lead">Av. de Concha Espina, 1, Chamartín, 28036 Madrid</p></div></div>
+      <div class="card"><div class="pad"><strong>Teléfono</strong><p class="lead">648 987 815</p></div></div>
+      <div class="card"><div class="pad"><strong>Email</strong><p class="lead">info@ultimatekits.com</p></div></div>
+      <div class="card"><div class="pad"><strong>Horarios</strong><p class="lead">L-V 10:00–20:00</p></div></div>
+    </div>
+  </section>
+</main>
+
+<footer id="footer">
+  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+    <div class="brand" style="gap:8px">
+      <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+      <strong>Ultimate Kits</strong>
+    </div>
+    <div class="social">
+      <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+    </div>
+    <div class="small">© <span id="year"></span> Ultimate Kits · Todos los derechos reservados.</div>
+  </div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+<script type="module" src="../JS/contact.js"></script>
+</body>
+</html>

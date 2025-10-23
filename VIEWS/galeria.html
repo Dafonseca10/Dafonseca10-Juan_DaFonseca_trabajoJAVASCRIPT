@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos — Ultimate Kits</title>
+  <link rel="icon" type="image/png" href="../IMAGES/logo-ultimate-kits.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+        <span>Ultimate Kits</span>
+      </div>
+      <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="./galeria.html" class="active">Productos</a>
+        <a href="./presupuesto.html">Presupuesto</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <div class="actions">
+        <a href="./presupuesto.html" class="btn">Pedir Presupuesto</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cats">
+      <h2>Galería de Productos</h2>
+      <p class="lead">Explora nuestras camisetas oficiales, retro y ediciones especiales.</p>
+
+      <!-- Contenedor donde se cargarán las tarjetas de la galería mediante JavaScript -->
+      <div id="gallery" class="grid4"></div>
+
+      <!-- Modal (ventana emergente para mostrar la imagen ampliada) -->
+      <div id="modal"
+        style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.75);align-items:center;justify-content:center;z-index:999;">
+        <img id="modal-img" src="" alt=""
+          style="max-width:90%;max-height:80%;border-radius:12px;border:1px solid var(--border)">
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div class="brand" style="gap:8px">
+        <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+        <strong>Ultimate Kits</strong>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <div class="small">© <span id="year"></span> Ultimate Kits · Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script src="../JS/gallery.js" type="module"></script>
+</body>
+
+</html>

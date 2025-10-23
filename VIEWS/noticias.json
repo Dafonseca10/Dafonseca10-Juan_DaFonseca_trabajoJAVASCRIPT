@@ -1,0 +1,34 @@
+{
+  "noticias": [
+    {
+      "titulo": "Nike is Back in Latin America",
+      "fecha": "2025-10-10",
+      "resumen": "Regreso de Nike a LATAM según Footy Headlines.",
+      "url": "https://www.footyheadlines.com/2025/10/nike-is-back-in-latin-america.html"
+    },
+    {
+      "titulo": "DFB 2026 Home Kit",
+      "fecha": "2025-02-12",
+      "resumen": "Detalles de la camiseta local de Alemania 2026.",
+      "url": "https://www.footyheadlines.com/2025/02/dfb-2026-home-kit.html"
+    },
+    {
+      "titulo": "Germany 2026 Jacket",
+      "fecha": "2025-10-05",
+      "resumen": "Chaqueta Alemania 2026: primeras imágenes.",
+      "url": "https://www.footyheadlines.com/2025/10/germany-2026-jacket.html"
+    },
+    {
+      "titulo": "Adidas 2026 Ball Set",
+      "fecha": "2025-09-21",
+      "resumen": "Set de balones Adidas 2026 filtrado.",
+      "url": "https://www.footyheadlines.com/2025/09/adidas-2026-ball-set.html"
+    },
+    {
+      "titulo": "Greece 2026 Home Kit",
+      "fecha": "2025-03-01",
+      "resumen": "Camiseta local de Grecia 2026 — primeros detalles.",
+      "url": "https://www.footyheadlines.com/2025/03/greece-2026-home-kit.html"
+    }
+  ]
+}

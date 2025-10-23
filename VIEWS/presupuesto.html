@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Presupuesto — Ultimate Kits</title>
+  <link rel="icon" type="image/png" href="../IMAGES/logo-ultimate-kits.png">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+        <span>Ultimate Kits</span>
+      </div>
+      <nav class="menu">
+        <a href="../index.html">Inicio</a>
+        <a href="./galeria.html">Productos</a>
+        <a href="./presupuesto.html" class="active">Presupuesto</a>
+        <a href="./contacto.html">Contacto</a>
+      </nav>
+      <div class="actions">
+        <a href="./presupuesto.html" class="btn">Pedir Presupuesto</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="cats">
+      <h2>Solicita tu presupuesto</h2>
+      <p class="lead">Validamos tus datos y calculamos el total automáticamente.</p>
+
+      <!--Lo hare con dos partes una para datos y otra para sus opciones y envios -->
+      <form class="form" id="form" novalidate>
+
+        <!-- Parte 1: Datos de contacto -->
+        <!-- Aqui se cumplira todas las validaciones que necesitamos :D -->
+        <div class="form-card">
+          <h3>Datos de contacto</h3>
+          <div class="inner">
+            <div class="form-grid">
+              <label>Nombre
+                <input required name="nombre" maxlength="15" placeholder="Lionel Andres">
+                <small id="errNombre" class="small"></small>
+              </label>
+              <label>Apellidos
+                <input required name="apellidos" maxlength="40" placeholder="Messi Cuccitini">
+                <small id="errApellidos" class="small"></small>
+              </label>
+              <label>Teléfono
+                <input required name="telefono" maxlength="9" inputmode="numeric" placeholder="600123456">
+                <small id="errTelefono" class="small"></small>
+              </label>
+              <label>Email
+                <input required name="email" type="email" placeholder="Vardrid@Colchon.com">
+                <small id="errEmail" class="small"></small>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parte 2: Opciones de presupuesto (financiación + varias camisetas) -->
+        <div class="form-card">
+          <h3>Opciones de presupuesto</h3>
+          <div class="inner">
+            <!-- Cantidades por tipo de camiseta -->
+            <div class="form-grid">
+              <label>Camiseta FAN — 25 €
+                <input name="qty_fan" type="number" min="0" value="0" data-price="25">
+              </label>
+              <label>Camiseta PLAYER — 35 €
+                <input name="qty_player" type="number" min="0" value="0" data-price="35">
+              </label>
+              <label>Camiseta RETRO — 35 €
+                <input name="qty_retro" type="number" min="0" value="0" data-price="35">
+              </label>
+              <label>Edición ESPECIAL — 30 €
+                <input name="qty_especial" type="number" min="0" value="0" data-price="30">
+              </label>
+            </div>
+
+            <!-- Plazo de financiación -->
+            <div class="form-grid" style="margin-top:8px">
+              <label>Plazo de pago (meses)
+                <input name="plazo" type="number" min="1" max="24" value="6">
+                <small class="muted">Financiación: 6–11 meses → +5% · 12+ meses → +10%</small>
+              </label>
+            </div>
+
+            <!-- Extras (aplicados al pedido completo) -->
+            <fieldset class="form-fieldset">
+              <legend>Extras</legend>
+              <!-- Extras por camiseta -->
+              <label><input type="checkbox" name="extrasCamiseta" data-price="5"> Camiseta Manga Larga (+5 € por
+                camiseta)</label>
+              <label><input type="checkbox" name="extrasCamiseta" data-price="1"> Parche competición (+1 € por
+                camiseta)</label>
+
+              <!-- Extra global (por pedido) -->
+              <label><input type="checkbox" name="extrasPedido" data-price="2"> Envío urgente (+2 € total)</label>
+            </fieldset>
+
+          </div>
+        </div>
+
+
+        <!-- Total -->
+        <div class="total-box">
+          <div>
+            <h3 style="margin:0">Presupuesto</h3>
+            <p class="lead" style="margin:4px 0 0">Se actualiza al cambiar cualquier opción.</p>
+          </div>
+          <div id="presupuestoTotal" class="amount">0,00 €</div>
+        </div>
+
+        <!-- Condiciones + Envío -->
+        <div class="form-card">
+          <div class="inner">
+            <label class="cond">
+              <input type="checkbox" name="cond"> Acepto las condiciones
+            </label>
+
+            <small id="errCond" class="small"></small>
+
+            <div class="actions-row" style="margin-top:12px">
+              <button class="btn" type="submit">Enviar</button>
+              <button class="btn" type="reset"
+                onclick="setTimeout(()=>document.getElementById('presupuestoTotal').textContent='0,00 €',0)">Reset</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+      <div class="brand" style="gap:8px">
+        <img src="../IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+        <strong>Ultimate Kits</strong>
+      </div>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+      </div>
+      <div class="small">© <span id="year"></span> Ultimate Kits · Todos los derechos reservados.</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+  <script type="module" src="../JS/budget.js"></script>
+</body>
+
+</html>

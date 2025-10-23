@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ultimate Kits — Camisetas de Fútbol</title>
+  <link rel="stylesheet" href="./CSS/style.css">
+  <link rel="icon" type="image/png" href="./IMAGES/logo-ultimate-kits.png">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand">
+        <img src="./IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+        <span>Ultimate Kits</span>
+      </div>
+      <nav class="menu">
+        <a href="index.html">Inicio</a>
+        <a href="VIEWS/galeria.html">Productos</a>
+        <a href="VIEWS/presupuesto.html">Presupuesto</a>
+        <a href="VIEWS/contacto.html">Contacto</a>
+      </nav>
+      <div class="actions">
+        <a href="VIEWS/presupuesto.html" class="btn">Pedir Presupuesto</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="inicio" class="hero">
+      <div class="hero-img" role="img" aria-label="Bienvenida Ultimate Kits"></div>
+      <div class="wrap bar">
+        <h1>Bienvenidos</h1>
+
+      </div>
+    </section>
+
+    <!-- CATEGORÍAS -->
+    <section id="categorias" class="cats">
+      <div class="wrap">
+        <h2>Camisetas de fútbol</h2>
+        <p class="lead">Elige tu estilo: Fan, Player, Retro, Ediciones especiales.</p>
+        <div class="grid4">
+          <article class="card">
+            <div class="thumb"><img src="https://zonacamisetas.com/cdn/shop/files/6e1695a6.jpg?v=1748817638&width=1200"
+                alt="Camiseta Fan"></div>
+            <div class="pad"><span class="pill">Fan</span>
+              <h3>Versión Fan</h3>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://zonacamisetas.com/cdn/shop/files/5f55d68a.jpg?v=1748823278&width=1200"
+                alt="Camiseta Player"></div>
+            <div class="pad"><span class="pill">Player</span>
+              <h3>Versión Player</h3>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://futbolcamis.es/wp-content/uploads/2023/10/548c691e-scaled.jpeg"
+                alt="Camiseta Retro"></div>
+            <div class="pad"><span class="pill">Retro</span>
+              <h3>Version Retro</h3>
+            </div>
+          </article>
+          <article class="card">
+            <div class="thumb"><img src="https://futbolcamis.es/wp-content/uploads/2024/09/7bc30254-scaled.jpg"
+                alt="Edición Especial"></div>
+            <div class="pad"><span class="pill">Especial</span>
+              <h3>Ediciones Especiales</h3>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section id="noticias" class="news">
+      <div class="wrap">
+        <h2>Noticias referentes al futbol</h2>
+        <div id="news" class="news-list" role="feed" aria-busy="true">
+          <div class="news-item">Cargando noticias…</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+      <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap">
+        <div class="brand" style="gap:8px">
+          <img src="./IMAGES/logo-ultimate-kits.png" alt="Logo Ultimate Kits">
+          <strong>Ultimate Kits</strong>
+        </div>
+        <div class="social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X/Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+        <div class="small">© <span id="year"></span> Ultimate Kits · Todos los derechos reservados.</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="module">
+    import { loadNews } from './JS/news.js';
+    loadNews('#news');
+  </script>
+</body>
+
+</html>
