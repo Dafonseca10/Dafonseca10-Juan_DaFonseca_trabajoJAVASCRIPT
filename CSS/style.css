@@ -176,7 +176,7 @@ p.lead {
 .hero .hero-img {
   position: relative;
   height: 80vh;
-  background: url(IMAGES/hero-ultimatekits.png) left center/cover no-repeat #000;
+  background: url(/IMAGES/hero-ultimatekits.png) left center/cover no-repeat #000;
   animation: zoomIn 1200ms ease both;
 }
 
